@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitnabız Projesi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/logo.png" class="logo" />
+            <h1>Bit<span style="color: red;">Nabız</span> - Akıllı Bitki Hastalık Tespiti</h1>
+            <p>Bitknizin Sağlığını Anında Tespit Ediniz</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Proje Hakkında</h2>
+            <p>Bitnabız, bitkinizin yapraklarından hastalıklarını tespit edebileceğiniz bir mobil uygulama.</p>
+        </section>
+
+        <section id="features">
+            <h2>Özellikler</h2>
+            <ul>
+                <li>Hastalık tespiti</li>
+                <li>Türkiye'deki yaygın bitkiler</li>
+                <li>Mobil uyumlu</li>
+            </ul>
+        </section>
+        <section id="dataset">
+            <h2>Dataset</h2>
+            <div class="item" onclick="openModal()">
+                <span class="icon">✔</span>
+                <span class="text">26 farklı bitki türü</span>
+            </div>
+            <div class="item" onclick="openModal()"> <!-- Modal'ı tetikleyen alan -->
+                <span class="icon">✔</span>
+                <span class="text">116 hastalık türü</span>
+            </div>
+        </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title">Bitki Türleri</h3>
+                <div id="plant-list"></div>
+            </div>
+        </div>
+
+
+
+        <section id="contact">
+            <h2>İletişim</h2>
+            <p>BitNabız ile ilgili daha fazla bilgi almak için bize ulaşabilirsiniz.</p>
+            <p style="color: red;">bkirma7@gmail.com</p>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>BitNabız</h2>
+                <p>Anında bitkiniz <span style="color: red;">nabzını</span> ölçün.</p>
+                <img src="assets/apple-icon.png" class="apple-icon" />
+            </div>
+
+            <div class="footer-column">
+                <h2>Uygulama</h2>
+                <ul>
+                    <li><a href="#">Özellikler</a></li>
+                    <li><a href="#">Destek</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Yasal</h2>
+                <ul>
+                    <li><a href="#">Gizlilik Politikası</a></li>
+                    <li><a href="#">Kullanım Koşulları</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="copyright">© 2025 Bitnabız. Tüm hakları saklıdır.</p>
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="plants.js"></script>
+
+</body>
+
+</html>

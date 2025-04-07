@@ -1,0 +1,19 @@
+{
+  "name": "color-button-app",
+  "version": "1.0.0",
+  "description": "Bir tıklama ile renk değiştiren buton ve sayaç uygulaması",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "color-button",
+    "interactive",
+    "ES6"
+  ],
+  "author": "Adınız",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
