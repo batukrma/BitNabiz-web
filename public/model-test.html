@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Model Testi</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="model-test.css">
+
 </head>
 
 <body>
@@ -13,7 +15,7 @@
         <div class="container">
             <img src="assets/logo.png" class="logo" />
             <h1>Bit<span style="color: red;">Nabız</span> - Akıllı Bitki Hastalık Tespiti</h1>
-            <p>Bitknizin Sağlığını Anında Tespit Ediniz</p>
+            <p>Bitkinizin Sağlığını Anında Tespit Ediniz</p>
         </div>
         <div class="header-buttons">
             <button onclick="window.location.href='index.html'">Ana Sayfa</button>
@@ -26,12 +28,12 @@
     <main>
         <section id="model-test-section">
             <h2>Modelinizi Test Edin</h2>
-            <input type="file" id="file-input" onchange="previewImage()" />
+            <input type="file" id="file-input" onchange="handleFileSelect()" />
             <div id="image-preview-container">
                 <img id="image-preview" src="" alt="Yüklenen Fotoğrafı Görüntüle"
                     style="display:none; width: 100%; max-width: 400px; margin-top: 20px; border-radius: 8px;" />
             </div>
-            <button id="upload-btn" onclick="uploadImage()">Yükle ve Test Et</button>
+            <button id="upload-btn" onclick="uploadImage()" style="display: none;">Test Et</button>
             <div id="result"></div>
         </section>
     </main>

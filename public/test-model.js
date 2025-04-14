@@ -1,21 +1,31 @@
 import { plantTypeMap, diseaseMap } from './data.js';
 
 function previewImage() {
+    const file = document.getElementById('file-input').files[0];
+    const preview = document.getElementById('image-preview');
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+}
+
+function handleFileSelect() {
     const fileInput = document.getElementById('file-input');
     const file = fileInput.files[0];
 
+    document.getElementById('result').innerHTML = "";
+
     if (file) {
-        const reader = new FileReader();
-
-        reader.onload = function (event) {
-            const imagePreview = document.getElementById('image-preview');
-            imagePreview.src = event.target.result;
-            imagePreview.style.display = 'block';
-        };
-
-        reader.readAsDataURL(file);
+        previewImage();
+        document.getElementById('upload-btn').style.display = 'inline-block';
+    } else {
+        document.getElementById('upload-btn').style.display = 'none';
     }
 }
+
 
 export async function uploadImage() {
     const fileInput = document.getElementById('file-input');
@@ -58,3 +68,4 @@ export async function uploadImage() {
     }
 }
 
+window.handleFileSelect = handleFileSelect;
